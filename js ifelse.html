@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ID = edge">
+    <link rel="stylesheet" href="style.css">
+    <title> javaScript if else</title>
+</head>
+<body>
+    <h1> conditional statement in javaScript</h1>
+    <p> Display " Good Day " if the hour full fill requirement</p>
+    <p id = "demo"> </p>
+    <label> Enter the number you want</label><br>
+    <input type="text" id="inputype"><br>
+    <button id="enterbutton"> Enter</button>;<br>
+    <div class="greeting"></div>
+    <script>
+        const inputtype = document.getElementById(" inputtype");
+        const enterbutton  = document.getElementById("enterbutton");
+        const greetingdiv = document.querySelector("greeting");
+        function greeting(){
+            const enter = inputtype.value;
+            greetingdiv.textContent = ` your value is, ${enter}`
+        }
+        enterbutton.addEventListener("onclick", greeting);
+       /* if(time < 10){
+            greeting  = "good morning";
+        }
+        else if (time < 15){
+            greeting = "good day";
+        }
+        else{
+            greeting = " good evening";
+        }
+        console.log(greeting);*/
+        let year = prompt("please enter the year");
+        if(year == 2026){
+            console.log("your are correct")
+            console.log('you are so smart bro')
+            console.log('good job please continue ')
+        }
+        else {
+            console.log('please correct it ')
+            console.log('imporve it for the next ')
+            console.log('your miss some essential information')
+        }
+    </script>
+    
+</body>
+</html>
