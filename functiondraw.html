@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ID = edge">
+    <link rel="stylesheet" 
+               href="styl.css">
+    <title> function to draw rextangle</title>
+</head>
+<body>
+    <h1> this program is to to draw function</h1>
+    <script>
+        function draw(){
+            ctx.clearRect(0, 0, width, height);
+            for (let i=0; i<=50; i++){
+                ctx.beginPath();
+                ctx.fillStyl = "rgb(250 0 0 / 50%)";
+                ctx.arc( random(width),random(height),random(50),0,2*math.pi);
+                ctx.fill();
+            }
+        }
+    </script>
+</body>
+</html>

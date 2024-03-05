@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=" X-UA-Compatible"
+          content="ID = edge">
+    <link rel="stylesheet" 
+          href="this.css">
+    <title> THE ROLE OF THIS KEY WORD IN JAVASCRIPT</title>
+</head>
+<body>
+    <h1> THE IMPORTANCE OF THIS KEY WORD IN JAVASCRIPT</h1>
+    <p> this key word is used to clean and simplfy code in javascriipt</p>
+    <script>
+        const boleAirport = {
+            airline: 'PRIVATE JET',
+            setcode: 'PJ',
+            booking:[],
+            book(flightNUm, name, time){
+                console.log(`${name} booked set on ${this.airline} 
+                flight ${this.setcode} ${flightNUm}`)
+            }
+        }
+        boleAirport.book(482, 'DEVELOPER ABDILZIZ');
+        boleAirport.book(482, 'ASMA');
+        boleAirport.book(484, 'PROGRAMMER');
+        // CREATING ANOTHER OBJECT INSIDE THE FIRST CLALL FUNCTION
+        const book = boleAirport.book;
+        const swiss = {
+            name: ' swiss one',
+            setcode: 'SW',
+            booking: [],
+        }
+        book(flightNUm,name)
+     book.call(swiss, 234, 'HOW I FORGOT YOU ');
+        console.log(swiss);
+    </script>
+</body>
+</html>

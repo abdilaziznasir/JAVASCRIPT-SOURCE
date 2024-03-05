@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible"
+           content="ID = edge">
+    <link rel="stylesheet"
+          href="style.css">
+    <title> SCRIPT TRAINING PROGRAM</title>
+</head>
+<body>
+    <h1> Script function training path</h1>
+    <script>
+        function ask(quetion, yes, no){
+            if(confirm(quetion)) yes()
+            else no()
+        }
+        function showOk(){
+            alert("you are agree to our privacy and terms ");
+        }
+      
+        function showCancel(){
+            alert (" your excution was canceled because of you disagreement ")
+        }
+      
+        ask("do you agree with our privacy and terms?", showOk, showCancel);
+        // function declaration  age judgment
+        let age = prompt('please enter your age ')
+        if (age < 18){
+            function wellcome(){
+                console.log(`hell your below, ${age},so your are't
+                fullfill our privacy`)
+            }
+            }
+            else {
+                function wellcome() {
+                    console.log(`hello congra you are, ${age}, so you can join asset`)
+                }
+            }
+            wellcome();
+
+            // WORKING ON FIZZ AND BUZZ OF FUNCTION
+        let number = parseInt(prompt('please enter the nuber'))
+        for (i = 1; i<=number; i++){
+            if(i%3==0 && i%5==0){
+                console.log('fizzbuzz')
+            }
+            else if(i%3==0){
+                console.log('this is fizz');
+            }
+            else if(i%5==0){
+                console.log('this is buzz')
+            }
+            else {
+                console.log(i);
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

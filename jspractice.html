@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+         content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+           content="ID = edge">
+    <link rel="stylesheet" 
+          href="style.css">
+    <title> PRACTICE </title>
+    <style>
+        html {
+            width: 100px;
+            height: inherit;
+            background-color: yellow;
+        }
+        body {
+            background-color: aqua;
+            /* border: 6px solid blue; */
+        }
+        canvas {
+            display: block;
+        }
+        button {
+            position: absolute;
+            top: 200px;
+            left: 900px;
+            border: 10px solid mediumspringgreen;
+            padding: 20px;
+            margin: 2px 4px;
+            animation: animate 6s infinite;
+        }
+        @keyframes animate{
+            0% {
+                transform: 1;
+            }
+            25% {
+                transform: 0;
+            }
+            50% {
+                transform: 1;
+            }
+            75% {
+                transform: 1.5;
+            }
+            100% {
+                transform: 0.45;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1> simple training for drawing sample</h1> -->
+    <button> TOUCH HERE </button> 
+    <canvas></canvas>
+    <script>
+const btn = document.querySelector("button");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+document.addEventListener("DOMContentLoaded", () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+});
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI,
+    );
+    ctx.fill();
+  }
+}
+
+btn.addEventListener("click", draw);
+
+    </script>
+</body>
+</html>
