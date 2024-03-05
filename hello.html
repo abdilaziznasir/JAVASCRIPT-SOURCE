@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width initial-scale = 1.o">
+    <meta http-equiv="X-UA-Compatible" 
+          content=" ID = edge">
+    <link rel="stylesheet" 
+          href="style.css">
+    <link rel="stylesheet"
+          href="hello.css">
+    <title>Greeting</title>
+</head>
+<body>
+    <label > Please Enter Your Name</label><br>
+    <input type="text" id="nameInput"> <br>
+    <button id="greetButton">Submit</button><br>
+    <div class="greeting"></div>
+    <!-- adding java script file -->
+
+    <script>
+        const greetButton = document.getElementById("greetButton");
+        const nameInput = document.getElementById("nameInput");
+        const greetingdiv = document.querySelector(".greeting");
+
+        function greeting() {
+            const name = nameInput.value;
+        greetingdiv.textContent = `Hello, ${name}, how are you?`;
+            console.log(`Hello, ${name}, how are you? I fine how about life
+            learning is diffcult task that is not easy but most of the people 
+            said that it's friut is so beuatifull 
+            so pateince is the correct solution for every thing.`);
+        }
+
+        greetButton.addEventListener("click", greeting);
+        
+        // concatinating variables
+        const greet = 'hello'
+              name = 'programmer';
+              console.log(greet + ' ,' + name)
+            //   creating string length
+            let text = 'abcdefghijklmnopqrstuvwxyz'
+                length = text.length;
+                // upper = text.toUpperCase();
+                console.log(length)
+                // javaScript string methods
+                let id = 'nasir'
+                    age = id.charCodeAt(0);
+                    console.log(age)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: aqua;
+}
+.container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+    
+}
+#name {
+    /* display: flex; */
+    justify-content: center;
+    color: red;
+}
+#textbox1 {
+    /* display: flex; */
+    justify-content: center;
+    color: yellow;
+}
+#email {
+    /* display: flex; */
+    justify-content: center;
+}
